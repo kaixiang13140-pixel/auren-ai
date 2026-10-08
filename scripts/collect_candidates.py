@@ -21,7 +21,7 @@ LICENSE_URL = "https://opendatacommons.org/licenses/odbl/1-0/"
 FIELDS = "code,product_name,product_name_en,brands,categories_tags,countries_tags,image_front_url,last_modified_t"
 SOURCES = [
     {"key": "opf_jewelry", "name": "Open Products Facts", "host": "world.openproductsfacts.org",
-     "params": {"categories_tags": "en:jewellery"}, "fallback_category": "Other", "page_size": 70},
+     "params": {"categories_tags": "en:jewellery"}, "fallback_category": "Jewelry & Accessories", "page_size": 70},
     {"key": "opf_general", "name": "Open Products Facts", "host": "world.openproductsfacts.org",
      "params": {}, "fallback_category": "Other", "page_size": 100},
     {"key": "obf", "name": "Open Beauty Facts", "host": "world.openbeautyfacts.org",
@@ -65,7 +65,7 @@ def normalize_product(spec, product, previous, now):
     code = str(product.get("code") or "").strip()
     if not re.fullmatch(r"[0-9A-Za-z]{6,28}", code):
         return None
-    name = (product.get("product_name_en") or product.get("product_name") or "").strip()
+    name = str(product.get("product_name_en") or product.get("product_name") or "").strip()
     if len(name) < 3 or name.lower() in ("unknown", "product", "produit", "none"):
         return None
     name = name[:180]
@@ -83,11 +83,19 @@ def normalize_product(spec, product, previous, now):
     item_id = spec["host"] + ":" + code
     old = previous.get(item_id, {})
     score = 35 + (20 if brand else 0) + (20 if image_url else 0) + (15 if tags else 0) + (10 if markets else 0)
+    category = classify(name, tags, spec["fallback_category"])
+    reasons = {"catalog_completeness": round(score * 0.6),
+               "jewelry_focus": 20 if category == "Jewelry & Accessories" else 0,
+               "country_evidence": 20 if markets else 0}
     return {
         "id": item_id,
+        "source_collection": spec["key"],
+        "freshness": "fresh",
+        "research_priority_score": sum(reasons.values()),
+        "research_priority_components": reasons,
         "product_name": name,
         "brand": brand or None,
-        "category": classify(name, tags, spec["fallback_category"]),
+        "category": category,
         "image_url": image_url,
         "source_platform": spec["name"],
         "source_url": "https://" + spec["host"] + "/product/" + urllib.parse.quote(code),
@@ -98,7 +106,7 @@ def normalize_product(spec, product, previous, now):
         "catalog_last_modified": product.get("last_modified_t"),
         "first_seen_at": old.get("first_seen_at") or now,
         "last_seen_at": now,
-        "days_observed": int(old.get("days_observed") or 0) + 1,
+        "days_observed": int(old.get("days_observed") or 0) + int(str(old.get("last_seen_at", ""))[:10] != now[:10]),
         "price": None,
         "seller": None,
         "sales": None,
@@ -177,7 +185,16 @@ def main():
             statuses.append({"source": spec["name"], "collection": spec["key"],
                              "status": "error", "message": str(exc)[:180]})
             print(spec["key"], "ERROR:", str(exc)[:180])
-    if not products:
+    fresh_count = len(products)
+    failed = {x["collection"] for x in statuses if x["status"] == "error"}
+    for item_id, old in previous.items():
+        collection = old.get("source_collection")
+        host = item_id.split(":", 1)[0]
+        unavailable = collection in failed if collection else all(
+            spec["key"] in failed for spec in SOURCES if spec["host"] == host)
+        if unavailable and item_id not in products:
+            products[item_id] = {**old, "freshness": "stale"}
+    if not fresh_count:
         raise RuntimeError("No verified source records received. Preserving previous output; no fabricated products.")
     ordered = sorted(products.values(), key=lambda p: (
         p["category"] != "Jewelry & Accessories",
@@ -187,6 +204,8 @@ def main():
     ))[:280]
     payload = {
         "generated_at": now,
+        "fresh_records": fresh_count,
+        "research_priority_method": "60% catalog completeness + 20 jewelry focus + 20 country tag evidence; not demand or profit",
         "data_type": "open_catalog_product_records",
         "title": "Public product research candidates, not sales rankings",
         "disclaimer": "Catalog records are not verified for resale, US/MY availability, supplier price, sales, or demand. Completeness is not a product opportunity score.",
