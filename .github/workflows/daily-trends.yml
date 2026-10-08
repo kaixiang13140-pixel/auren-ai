@@ -19,11 +19,13 @@ jobs:
           python-version: '3.12'
       - name: Fetch genuine public trend RSS
         run: python scripts/collect_trends.py
+      - name: Fetch genuine open catalog product records
+        run: python scripts/collect_candidates.py
       - name: Commit latest data if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/trending_searches.json
+          git add data/trending_searches.json data/product_candidates.json
           if git diff --cached --quiet; then
             echo "No changes"
           else
