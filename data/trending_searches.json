@@ -1,12 +1,168 @@
 {
-  "generated_at": "2026-10-08T00:55:19.548443+00:00",
+  "generated_at": "2026-10-08T01:10:45.851604+00:00",
   "source": "Google Trends public trending searches RSS",
-  "disclaimer": "Search trends only. Not TikTok Shop products, sales, GMV, or verified demand.",
+  "disclaimer": "Search trends only. Not sales, GMV, or verified product demand.",
   "markets": [
     "US",
     "MY"
   ],
+  "sources": [
+    {
+      "market": "US",
+      "status": "ok",
+      "received": 10
+    },
+    {
+      "market": "MY",
+      "status": "ok",
+      "received": 10
+    }
+  ],
   "items": [
+    {
+      "market": "US",
+      "keyword": "max muncy",
+      "approx_search_traffic": "5000+",
+      "published_at": "Wed, 7 Oct 2026 17:50:00 -0700",
+      "source_platform": "Google Trends",
+      "source_url": "https://trends.google.com/trending/rss?geo=US",
+      "data_type": "trending_search_keyword",
+      "is_product": false,
+      "sales": null,
+      "freshness": "fresh",
+      "observed_at": "2026-10-08T01:10:45.851604+00:00",
+      "first_seen_at": "2026-10-08T01:10:45.851604+00:00",
+      "previous_approx_search_traffic": null,
+      "trend_analysis": "RSS snapshot only; traffic estimates are not comparable sales or demand"
+    },
+    {
+      "market": "US",
+      "keyword": "aces vs valkyries",
+      "approx_search_traffic": "5000+",
+      "published_at": "Wed, 7 Oct 2026 17:50:00 -0700",
+      "source_platform": "Google Trends",
+      "source_url": "https://trends.google.com/trending/rss?geo=US",
+      "data_type": "trending_search_keyword",
+      "is_product": false,
+      "sales": null,
+      "freshness": "fresh",
+      "observed_at": "2026-10-08T01:10:45.851604+00:00",
+      "first_seen_at": "2026-10-08T01:10:45.851604+00:00",
+      "previous_approx_search_traffic": null,
+      "trend_analysis": "RSS snapshot only; traffic estimates are not comparable sales or demand"
+    },
+    {
+      "market": "US",
+      "keyword": "anthony volpe",
+      "approx_search_traffic": "2000+",
+      "published_at": "Wed, 7 Oct 2026 17:50:00 -0700",
+      "source_platform": "Google Trends",
+      "source_url": "https://trends.google.com/trending/rss?geo=US",
+      "data_type": "trending_search_keyword",
+      "is_product": false,
+      "sales": null,
+      "freshness": "fresh",
+      "observed_at": "2026-10-08T01:10:45.851604+00:00",
+      "first_seen_at": "2026-10-08T01:10:45.851604+00:00",
+      "previous_approx_search_traffic": null,
+      "trend_analysis": "RSS snapshot only; traffic estimates are not comparable sales or demand"
+    },
+    {
+      "market": "US",
+      "keyword": "nlcs",
+      "approx_search_traffic": "1000+",
+      "published_at": "Wed, 7 Oct 2026 17:50:00 -0700",
+      "source_platform": "Google Trends",
+      "source_url": "https://trends.google.com/trending/rss?geo=US",
+      "data_type": "trending_search_keyword",
+      "is_product": false,
+      "sales": null,
+      "freshness": "fresh",
+      "observed_at": "2026-10-08T01:10:45.851604+00:00",
+      "first_seen_at": "2026-10-08T01:10:45.851604+00:00",
+      "previous_approx_search_traffic": null,
+      "trend_analysis": "RSS snapshot only; traffic estimates are not comparable sales or demand"
+    },
+    {
+      "market": "US",
+      "keyword": "jose caballero",
+      "approx_search_traffic": "500+",
+      "published_at": "Wed, 7 Oct 2026 17:50:00 -0700",
+      "source_platform": "Google Trends",
+      "source_url": "https://trends.google.com/trending/rss?geo=US",
+      "data_type": "trending_search_keyword",
+      "is_product": false,
+      "sales": null,
+      "freshness": "fresh",
+      "observed_at": "2026-10-08T01:10:45.851604+00:00",
+      "first_seen_at": "2026-10-08T01:10:45.851604+00:00",
+      "previous_approx_search_traffic": null,
+      "trend_analysis": "RSS snapshot only; traffic estimates are not comparable sales or demand"
+    },
+    {
+      "market": "US",
+      "keyword": "trent grisham",
+      "approx_search_traffic": "500+",
+      "published_at": "Wed, 7 Oct 2026 17:50:00 -0700",
+      "source_platform": "Google Trends",
+      "source_url": "https://trends.google.com/trending/rss?geo=US",
+      "data_type": "trending_search_keyword",
+      "is_product": false,
+      "sales": null,
+      "freshness": "fresh",
+      "observed_at": "2026-10-08T01:10:45.851604+00:00",
+      "first_seen_at": "2026-10-08T01:10:45.851604+00:00",
+      "previous_approx_search_traffic": null,
+      "trend_analysis": "RSS snapshot only; traffic estimates are not comparable sales or demand"
+    },
+    {
+      "market": "US",
+      "keyword": "tellez braves",
+      "approx_search_traffic": "500+",
+      "published_at": "Wed, 7 Oct 2026 17:50:00 -0700",
+      "source_platform": "Google Trends",
+      "source_url": "https://trends.google.com/trending/rss?geo=US",
+      "data_type": "trending_search_keyword",
+      "is_product": false,
+      "sales": null,
+      "freshness": "fresh",
+      "observed_at": "2026-10-08T01:10:45.851604+00:00",
+      "first_seen_at": "2026-10-08T01:10:45.851604+00:00",
+      "previous_approx_search_traffic": null,
+      "trend_analysis": "RSS snapshot only; traffic estimates are not comparable sales or demand"
+    },
+    {
+      "market": "US",
+      "keyword": "callum turner",
+      "approx_search_traffic": "200+",
+      "published_at": "Wed, 7 Oct 2026 17:50:00 -0700",
+      "source_platform": "Google Trends",
+      "source_url": "https://trends.google.com/trending/rss?geo=US",
+      "data_type": "trending_search_keyword",
+      "is_product": false,
+      "sales": null,
+      "freshness": "fresh",
+      "observed_at": "2026-10-08T01:10:45.851604+00:00",
+      "first_seen_at": "2026-10-08T01:10:45.851604+00:00",
+      "previous_approx_search_traffic": null,
+      "trend_analysis": "RSS snapshot only; traffic estimates are not comparable sales or demand"
+    },
+    {
+      "market": "US",
+      "keyword": "jalen williams",
+      "approx_search_traffic": "200+",
+      "published_at": "Wed, 7 Oct 2026 17:50:00 -0700",
+      "source_platform": "Google Trends",
+      "source_url": "https://trends.google.com/trending/rss?geo=US",
+      "data_type": "trending_search_keyword",
+      "is_product": false,
+      "sales": null,
+      "freshness": "fresh",
+      "observed_at": "2026-10-08T01:10:45.851604+00:00",
+      "first_seen_at": "2026-10-08T01:10:45.851604+00:00",
+      "previous_approx_search_traffic": null,
+      "trend_analysis": "RSS snapshot only; traffic estimates are not comparable sales or demand"
+    },
     {
       "market": "US",
       "keyword": "starbucks menu",
@@ -16,117 +172,28 @@
       "source_url": "https://trends.google.com/trending/rss?geo=US",
       "data_type": "trending_search_keyword",
       "is_product": false,
-      "sales": null
-    },
-    {
-      "market": "US",
-      "keyword": "yandy diaz",
-      "approx_search_traffic": "500+",
-      "published_at": "Wed, 7 Oct 2026 17:40:00 -0700",
-      "source_platform": "Google Trends",
-      "source_url": "https://trends.google.com/trending/rss?geo=US",
-      "data_type": "trending_search_keyword",
-      "is_product": false,
-      "sales": null
-    },
-    {
-      "market": "US",
-      "keyword": "marvin harrison jr",
-      "approx_search_traffic": "1000+",
-      "published_at": "Wed, 7 Oct 2026 17:40:00 -0700",
-      "source_platform": "Google Trends",
-      "source_url": "https://trends.google.com/trending/rss?geo=US",
-      "data_type": "trending_search_keyword",
-      "is_product": false,
-      "sales": null
-    },
-    {
-      "market": "US",
-      "keyword": "okc",
-      "approx_search_traffic": "500+",
-      "published_at": "Wed, 7 Oct 2026 17:40:00 -0700",
-      "source_platform": "Google Trends",
-      "source_url": "https://trends.google.com/trending/rss?geo=US",
-      "data_type": "trending_search_keyword",
-      "is_product": false,
-      "sales": null
-    },
-    {
-      "market": "US",
-      "keyword": "braden smith",
-      "approx_search_traffic": "200+",
-      "published_at": "Wed, 7 Oct 2026 17:40:00 -0700",
-      "source_platform": "Google Trends",
-      "source_url": "https://trends.google.com/trending/rss?geo=US",
-      "data_type": "trending_search_keyword",
-      "is_product": false,
-      "sales": null
-    },
-    {
-      "market": "US",
-      "keyword": "tommy edman",
-      "approx_search_traffic": "200+",
-      "published_at": "Wed, 7 Oct 2026 17:40:00 -0700",
-      "source_platform": "Google Trends",
-      "source_url": "https://trends.google.com/trending/rss?geo=US",
-      "data_type": "trending_search_keyword",
-      "is_product": false,
-      "sales": null
-    },
-    {
-      "market": "US",
-      "keyword": "other mommy release date",
-      "approx_search_traffic": "500+",
-      "published_at": "Wed, 7 Oct 2026 17:30:00 -0700",
-      "source_platform": "Google Trends",
-      "source_url": "https://trends.google.com/trending/rss?geo=US",
-      "data_type": "trending_search_keyword",
-      "is_product": false,
-      "sales": null
-    },
-    {
-      "market": "US",
-      "keyword": "world series winners",
-      "approx_search_traffic": "500+",
-      "published_at": "Wed, 7 Oct 2026 17:30:00 -0700",
-      "source_platform": "Google Trends",
-      "source_url": "https://trends.google.com/trending/rss?geo=US",
-      "data_type": "trending_search_keyword",
-      "is_product": false,
-      "sales": null
-    },
-    {
-      "market": "US",
-      "keyword": "caleb wilson",
-      "approx_search_traffic": "500+",
-      "published_at": "Wed, 7 Oct 2026 17:30:00 -0700",
-      "source_platform": "Google Trends",
-      "source_url": "https://trends.google.com/trending/rss?geo=US",
-      "data_type": "trending_search_keyword",
-      "is_product": false,
-      "sales": null
-    },
-    {
-      "market": "US",
-      "keyword": "pauline astier",
-      "approx_search_traffic": "500+",
-      "published_at": "Wed, 7 Oct 2026 17:30:00 -0700",
-      "source_platform": "Google Trends",
-      "source_url": "https://trends.google.com/trending/rss?geo=US",
-      "data_type": "trending_search_keyword",
-      "is_product": false,
-      "sales": null
+      "sales": null,
+      "freshness": "fresh",
+      "observed_at": "2026-10-08T01:10:45.851604+00:00",
+      "first_seen_at": "2026-10-08T01:10:45.851604+00:00",
+      "previous_approx_search_traffic": "5000+",
+      "trend_analysis": "RSS snapshot only; traffic estimates are not comparable sales or demand"
     },
     {
       "market": "MY",
       "keyword": "radio online",
-      "approx_search_traffic": "500+",
+      "approx_search_traffic": "1000+",
       "published_at": "Wed, 7 Oct 2026 16:50:00 -0700",
       "source_platform": "Google Trends",
       "source_url": "https://trends.google.com/trending/rss?geo=MY",
       "data_type": "trending_search_keyword",
       "is_product": false,
-      "sales": null
+      "sales": null,
+      "freshness": "fresh",
+      "observed_at": "2026-10-08T01:10:45.851604+00:00",
+      "first_seen_at": "2026-10-08T01:10:45.851604+00:00",
+      "previous_approx_search_traffic": "500+",
+      "trend_analysis": "RSS snapshot only; traffic estimates are not comparable sales or demand"
     },
     {
       "market": "MY",
@@ -137,7 +204,12 @@
       "source_url": "https://trends.google.com/trending/rss?geo=MY",
       "data_type": "trending_search_keyword",
       "is_product": false,
-      "sales": null
+      "sales": null,
+      "freshness": "fresh",
+      "observed_at": "2026-10-08T01:10:45.851604+00:00",
+      "first_seen_at": "2026-10-08T01:10:45.851604+00:00",
+      "previous_approx_search_traffic": "500+",
+      "trend_analysis": "RSS snapshot only; traffic estimates are not comparable sales or demand"
     },
     {
       "market": "MY",
@@ -148,7 +220,12 @@
       "source_url": "https://trends.google.com/trending/rss?geo=MY",
       "data_type": "trending_search_keyword",
       "is_product": false,
-      "sales": null
+      "sales": null,
+      "freshness": "fresh",
+      "observed_at": "2026-10-08T01:10:45.851604+00:00",
+      "first_seen_at": "2026-10-08T01:10:45.851604+00:00",
+      "previous_approx_search_traffic": "200+",
+      "trend_analysis": "RSS snapshot only; traffic estimates are not comparable sales or demand"
     },
     {
       "market": "MY",
@@ -159,7 +236,12 @@
       "source_url": "https://trends.google.com/trending/rss?geo=MY",
       "data_type": "trending_search_keyword",
       "is_product": false,
-      "sales": null
+      "sales": null,
+      "freshness": "fresh",
+      "observed_at": "2026-10-08T01:10:45.851604+00:00",
+      "first_seen_at": "2026-10-08T01:10:45.851604+00:00",
+      "previous_approx_search_traffic": "100+",
+      "trend_analysis": "RSS snapshot only; traffic estimates are not comparable sales or demand"
     },
     {
       "market": "MY",
@@ -170,7 +252,12 @@
       "source_url": "https://trends.google.com/trending/rss?geo=MY",
       "data_type": "trending_search_keyword",
       "is_product": false,
-      "sales": null
+      "sales": null,
+      "freshness": "fresh",
+      "observed_at": "2026-10-08T01:10:45.851604+00:00",
+      "first_seen_at": "2026-10-08T01:10:45.851604+00:00",
+      "previous_approx_search_traffic": "200+",
+      "trend_analysis": "RSS snapshot only; traffic estimates are not comparable sales or demand"
     },
     {
       "market": "MY",
@@ -181,18 +268,28 @@
       "source_url": "https://trends.google.com/trending/rss?geo=MY",
       "data_type": "trending_search_keyword",
       "is_product": false,
-      "sales": null
+      "sales": null,
+      "freshness": "fresh",
+      "observed_at": "2026-10-08T01:10:45.851604+00:00",
+      "first_seen_at": "2026-10-08T01:10:45.851604+00:00",
+      "previous_approx_search_traffic": "100+",
+      "trend_analysis": "RSS snapshot only; traffic estimates are not comparable sales or demand"
     },
     {
       "market": "MY",
       "keyword": "braves vs dodgers",
-      "approx_search_traffic": "100+",
+      "approx_search_traffic": "200+",
       "published_at": "Wed, 7 Oct 2026 15:40:00 -0700",
       "source_platform": "Google Trends",
       "source_url": "https://trends.google.com/trending/rss?geo=MY",
       "data_type": "trending_search_keyword",
       "is_product": false,
-      "sales": null
+      "sales": null,
+      "freshness": "fresh",
+      "observed_at": "2026-10-08T01:10:45.851604+00:00",
+      "first_seen_at": "2026-10-08T01:10:45.851604+00:00",
+      "previous_approx_search_traffic": "100+",
+      "trend_analysis": "RSS snapshot only; traffic estimates are not comparable sales or demand"
     },
     {
       "market": "MY",
@@ -203,7 +300,12 @@
       "source_url": "https://trends.google.com/trending/rss?geo=MY",
       "data_type": "trending_search_keyword",
       "is_product": false,
-      "sales": null
+      "sales": null,
+      "freshness": "fresh",
+      "observed_at": "2026-10-08T01:10:45.851604+00:00",
+      "first_seen_at": "2026-10-08T01:10:45.851604+00:00",
+      "previous_approx_search_traffic": "1000+",
+      "trend_analysis": "RSS snapshot only; traffic estimates are not comparable sales or demand"
     },
     {
       "market": "MY",
@@ -214,18 +316,28 @@
       "source_url": "https://trends.google.com/trending/rss?geo=MY",
       "data_type": "trending_search_keyword",
       "is_product": false,
-      "sales": null
+      "sales": null,
+      "freshness": "fresh",
+      "observed_at": "2026-10-08T01:10:45.851604+00:00",
+      "first_seen_at": "2026-10-08T01:10:45.851604+00:00",
+      "previous_approx_search_traffic": "1000+",
+      "trend_analysis": "RSS snapshot only; traffic estimates are not comparable sales or demand"
     },
     {
       "market": "MY",
       "keyword": "haze malaysia",
-      "approx_search_traffic": "200+",
+      "approx_search_traffic": "500+",
       "published_at": "Wed, 7 Oct 2026 15:40:00 -0700",
       "source_platform": "Google Trends",
       "source_url": "https://trends.google.com/trending/rss?geo=MY",
       "data_type": "trending_search_keyword",
       "is_product": false,
-      "sales": null
+      "sales": null,
+      "freshness": "fresh",
+      "observed_at": "2026-10-08T01:10:45.851604+00:00",
+      "first_seen_at": "2026-10-08T01:10:45.851604+00:00",
+      "previous_approx_search_traffic": "200+",
+      "trend_analysis": "RSS snapshot only; traffic estimates are not comparable sales or demand"
     }
   ]
 }
