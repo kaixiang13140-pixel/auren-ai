@@ -21,7 +21,7 @@ LICENSE_URL = "https://opendatacommons.org/licenses/odbl/1-0/"
 FIELDS = "code,product_name,product_name_en,brands,categories_tags,countries_tags,image_front_url,last_modified_t"
 SOURCES = [
     {"key": "opf_jewelry", "name": "Open Products Facts", "host": "world.openproductsfacts.org",
-     "params": {"categories_tags": "en:jewellery"}, "fallback_category": "Jewelry & Accessories", "page_size": 70},
+     "params": {"categories_tags": "en:jewelry"}, "fallback_category": "Jewelry & Accessories", "page_size": 70},
     {"key": "opf_general", "name": "Open Products Facts", "host": "world.openproductsfacts.org",
      "params": {}, "fallback_category": "Other", "page_size": 100},
     {"key": "obf", "name": "Open Beauty Facts", "host": "world.openbeautyfacts.org",
