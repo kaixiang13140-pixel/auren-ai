@@ -107,23 +107,39 @@ def normalize_product(spec, product, previous, now):
     }
 
 def fetch_source(spec):
-    params = {
-        "fields": FIELDS,
-        "page_size": str(spec["page_size"]),
-        "sort_by": "last_modified_t",
-    }
-    params.update(spec["params"])
-    url = "https://" + spec["host"] + "/api/v2/search?" + urllib.parse.urlencode(params)
-    request = urllib.request.Request(url, headers={
-        "User-Agent": "AUREN-AI/1.1 (public research; https://github.com/kaixiang13140-pixel/auren-ai)",
-        "Accept": "application/json",
-    })
-    with urllib.request.urlopen(request, timeout=30) as response:
-        data = json.load(response)
-    products = data.get("products")
-    if not isinstance(products, list):
-        raise ValueError("Search API did not return a products list")
-    return products
+    """Retry transient upstream failures and then try a smaller API request.
+
+    Open community datasets are best-effort. Retries never invent records.
+    """
+    sizes = [spec["page_size"], min(spec["page_size"], 20)]
+    last_error = None
+    for variant, size in enumerate(sizes):
+        params = {"fields": FIELDS, "page_size": str(size)}
+        if variant == 0:
+            params["sort_by"] = "last_modified_t"
+        params.update(spec["params"])
+        url = "https://" + spec["host"] + "/api/v2/search?" + urllib.parse.urlencode(params)
+        for attempt in range(2):
+            request = urllib.request.Request(url, headers={
+                "User-Agent": "AUREN-AI/1.1 (public research; https://github.com/kaixiang13140-pixel/auren-ai)",
+                "Accept": "application/json",
+            })
+            try:
+                with urllib.request.urlopen(request, timeout=20) as response:
+                    data = json.load(response)
+                products = data.get("products")
+                if not isinstance(products, list):
+                    raise ValueError("Search API did not return a products list")
+                return products
+            except urllib.error.HTTPError as exc:
+                last_error = exc
+                if exc.code < 500 and exc.code != 429:
+                    raise
+            except (urllib.error.URLError, TimeoutError, ValueError, OSError) as exc:
+                last_error = exc
+            print(f"{spec['key']}: upstream failure, variant={variant}, attempt={attempt + 1}: {last_error}")
+            time.sleep(2 * (attempt + 1))
+    raise RuntimeError(f"All upstream API attempts failed: {last_error}")
 
 def load_previous():
     if not OUTPUT.exists():
@@ -157,7 +173,7 @@ def main():
             statuses.append({"source": spec["name"], "collection": spec["key"], "status": "ok",
                              "received": len(raw), "accepted": accepted})
             print(spec["key"], "received", len(raw), "accepted", accepted)
-        except (urllib.error.URLError, TimeoutError, ValueError, OSError) as exc:
+        except (urllib.error.URLError, TimeoutError, ValueError, OSError, RuntimeError) as exc:
             statuses.append({"source": spec["name"], "collection": spec["key"],
                              "status": "error", "message": str(exc)[:180]})
             print(spec["key"], "ERROR:", str(exc)[:180])
